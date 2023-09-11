@@ -33,10 +33,10 @@ namespace Program
             Mateito.Attack(Frankie);   // El elfo ataca al enano con su hacha
             Frankie.Attack(Emi);   // El enano ataca al mago con su hacha
 
-            Console.WriteLine($"{Maru.Name}: ");
-            Console.WriteLine($"{Emi.Name}: ");
-            Console.WriteLine($"{Mateito.Name}: ");
-            Console.WriteLine($"{Frankie.Name}: ");
+            Console.WriteLine($"{Maru.Name}: Health = {Maru.Health}");
+            Console.WriteLine($"{Emi.Name}: Health = {Emi.Health}");
+            Console.WriteLine($"{Mateito.Name}: Health = {Mateito.Health}");
+            Console.WriteLine($"{Frankie.Name}: Health = {Frankie.Health}");
 
             Console.ReadLine();
         }
