@@ -25,7 +25,7 @@ public class Item //sería el arma o el libro de hechizos o lo que sea
 
     public Item(string name, int power)
     {
-        Name = name;
-        Power = power;
+        this.Name = name;
+        this.Power = power;
     }
 }
