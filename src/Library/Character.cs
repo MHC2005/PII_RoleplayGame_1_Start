@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+
+
+namespace Library;
 public class Character
 {
     public string Name { get; set; }

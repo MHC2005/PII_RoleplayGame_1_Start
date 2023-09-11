@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Program
 {
@@ -6,6 +7,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
