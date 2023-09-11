@@ -8,10 +8,10 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Wizard Maru = new Wizard("Maru", 15);
-            Wizard Emi = new Wizard("Emi", 15);
-            Elf Mateito = new Elf("Mateito", 10);
-            Dwarf Frankie = new Dwarf("Frankie", 5);
+            Wizard Maru = new Wizard("Maru", 100);
+            Wizard Emi = new Wizard("Emi", 100);
+            Elf Mateito = new Elf("Mateito", 100);
+            Dwarf Frankie = new Dwarf("Frankie", 100);
 
         // Crear elementos
             Spell Confundo = new Spell("Confundo");
