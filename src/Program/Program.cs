@@ -8,9 +8,10 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Wizard gandalf = new Wizard("Gandalf");
-            Elf legolas = new Elf("Legolas");
-            Dwarf gimli = new Dwarf("Gimli");
+            Wizard Maru = new Wizard("Maru", 15);
+            Wizard Emi = new Wizard("Emi", 15);
+            Elf Mateito = new Elf("Mateito", 10);
+            Dwarf Frankie = new Dwarf("Frankie", 5);
 
         // Crear elementos
             Spell fireballSpell = new Spell("Fireball");
@@ -19,22 +20,23 @@ namespace Program
             Staff battleAxe = new Staff("Battle Axe", 10);
 
         // Asignar elementos a los personajes
-            gandalf.MagicalStaff = magicalStaff;
-            gandalf.LearnSpell(fireballSpell);
-            gandalf.LearnSpell(lightningSpell);
+            Emi.MagicalStaff = magicalStaff;
+            Emi.LearnSpell(fireballSpell);
+            Emi.LearnSpell(lightningSpell);
 
-            legolas.AddItem(battleAxe);
+            Mateito.AddItem(battleAxe);
 
-            gimli.AddWeapon(battleAxe);
+            Frankie.AddWeapon(battleAxe);
 
         // Realizar acciones
-            gandalf.Attack(legolas); // El mago ataca al elfo con hechizos
-            legolas.Attack(gimli);   // El elfo ataca al enano con su hacha
-            gimli.Attack(gandalf);   // El enano ataca al mago con su hacha
+            Maru.Attack(Mateito); // El mago ataca al elfo con hechizos
+            Mateito.Attack(Frankie);   // El elfo ataca al enano con su hacha
+            Frankie.Attack(Emi);   // El enano ataca al mago con su hacha
 
-            Console.WriteLine($"{gandalf.Name}: ");
-            Console.WriteLine($"{legolas.Name}: ");
-            Console.WriteLine($"{gimli.Name}: ");
+            Console.WriteLine($"{Maru.Name}: ");
+            Console.WriteLine($"{Emi.Name}: ");
+            Console.WriteLine($"{Mateito.Name}: ");
+            Console.WriteLine($"{Frankie.Name}: ");
 
             Console.ReadLine();
         }

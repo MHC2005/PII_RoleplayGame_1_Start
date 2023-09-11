@@ -8,7 +8,7 @@ public class Dwarf : Character
 {
     public List<Item> DwarfItems { get; set; }
 
-    public Dwarf(string name) : base(name)
+    public Dwarf(string name, int power) : base(name, power)
     {
         this.DwarfItems = new List<Item>();
     }

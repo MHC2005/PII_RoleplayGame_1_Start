@@ -6,10 +6,12 @@ namespace Library;
 public class Character
 {
     public string Name { get; set; }
+    public int Health { get; set; }
 
-    public Character(string name)
+    public Character(string name, int Health)
     {
         this.Name = name;
+        Health = 100;
     }
 
     public void Attack(Character target)

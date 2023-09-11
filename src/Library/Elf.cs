@@ -7,7 +7,7 @@ public class Elf : Character
 {
     public List<Item> ElfItems { get; set; }
 
-    public Elf(string name) : base(name)
+    public Elf(string name, int power) : base(name, power)
     {
         ElfItems = new List<Item>();
     }

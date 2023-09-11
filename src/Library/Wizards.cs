@@ -8,7 +8,7 @@ public class Wizard : Character
     public List<Spell> Spells { get; set; }
     public Staff MagicalStaff { get; set; }
 
-    public Wizard(string name) : base(name)
+    public Wizard(string name, int power) : base(name, power)
     {
         Spells = new List<Spell>();
     }
