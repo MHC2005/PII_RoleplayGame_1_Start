@@ -20,7 +20,7 @@ namespace Program
             Staff Espada = new Staff("Espada de Godric Gryffindor", 10);
 
         // Asignar elementos a los personajes
-            Emi.MagicalStaff = Piedra;
+            Emi.AddThings(Piedra);
             Emi.LearnSpell(Confundo);
             Maru.LearnSpell(Crucio);
 
