@@ -14,19 +14,19 @@ namespace Program
             Dwarf Frankie = new Dwarf("Frankie", 5);
 
         // Crear elementos
-            Spell fireballSpell = new Spell("Fireball");
-            Spell lightningSpell = new Spell("Lightning");
-            Staff magicalStaff = new Staff("Magical-Staff", 20);
-            Staff battleAxe = new Staff("Battle Axe", 10);
+            Spell Confundo = new Spell("Confundo");
+            Spell Crucio = new Spell("Crucio");
+            Staff Piedra = new Staff("Piedra Filosofal", 20);
+            Staff Espada = new Staff("Espada de Godric Gryffindor", 10);
 
         // Asignar elementos a los personajes
-            Emi.MagicalStaff = magicalStaff;
-            Emi.LearnSpell(fireballSpell);
-            Emi.LearnSpell(lightningSpell);
+            Emi.MagicalStaff = Piedra;
+            Emi.LearnSpell(Confundo);
+            Maru.LearnSpell(Crucio);
 
-            Mateito.AddItem(battleAxe);
+            Mateito.AddItem(Piedra);
 
-            Frankie.AddWeapon(battleAxe);
+            Frankie.AddWeapon(Espada);
 
         // Realizar acciones
             Maru.Attack(Mateito); // El mago ataca al elfo con hechizos
