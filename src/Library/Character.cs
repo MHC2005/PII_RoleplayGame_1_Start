@@ -11,7 +11,7 @@ public class Character
     public Character(string name, int Health)
     {
         this.Name = name;
-        Health = 100;
+        this.Health = Health;
     }
 
     public void Attack(Character target)
