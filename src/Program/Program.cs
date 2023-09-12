@@ -13,6 +13,10 @@ namespace Program
             Elf Mateito = new Elf("Mateito", 100);
             Dwarf Frankie = new Dwarf("Frankie", 100);
 
+            Wizard maruWizard = new Wizard("Maru", 15); // Crear un mago llamado "Maru"
+            Item someItem = new Item("Caliz de fuego", 5); // Crear un objeto
+            maruWizard.AddThings(someItem); // Agregar el objeto al mago
+
         // Crear elementos
             Spell Confundo = new Spell("Confundo");
             Spell Crucio = new Spell("Crucio");
@@ -20,7 +24,7 @@ namespace Program
             Staff Espada = new Staff("Espada de Godric Gryffindor", 10);
 
         // Asignar elementos a los personajes
-            Emi.MagicalStaff = Piedra;
+            Emi.AddThings(Piedra);
             Emi.LearnSpell(Confundo);
             Maru.LearnSpell(Crucio);
 
@@ -29,9 +33,9 @@ namespace Program
             Frankie.AddWeapon(Espada);
 
         // Realizar acciones
-            Maru.Attack(Mateito); // El mago ataca al elfo con hechizos
-            Mateito.Attack(Frankie);   // El elfo ataca al enano con su hacha
-            Frankie.Attack(Emi);   // El enano ataca al mago con su hacha
+            Maru.Attack(Mateito, 10); // El mago ataca al elfo con hechizos
+            Mateito.Attack(Frankie, 10);   // El elfo ataca al enano con su hacha
+            Frankie.Attack(Emi, 5);   // El enano ataca al mago con su hacha
 
             Console.WriteLine($"{Maru.Name}: Health = {Maru.Health}");
             Console.WriteLine($"{Emi.Name}: Health = {Emi.Health}");
