@@ -18,12 +18,13 @@ namespace Program
             Spell crucio = new Spell("Crucio", 10, 8);
             Staff piedra = new Staff("Piedra Filosofal", 20, 18);
             Staff espada = new Staff("Espada de Godric Gryffindor", 10, 8);
+            Staff SnitchDorada = new Staff("Snitch Dorada Quidditch", 16, 14);
 
             // Asignar elementos a los personajes
             emi.AddItem(piedra);
             emi.AddSpell(confundo);
 
-            maru.AddItem(Snitch Dorada);
+            maru.AddItem(SnitchDorada);
             maru.AddSpell(crucio);
 
             mateito.AddItem(piedra);
