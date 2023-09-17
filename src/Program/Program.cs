@@ -22,6 +22,8 @@ namespace Program
             // Asignar elementos a los personajes
             emi.AddItem(piedra);
             emi.AddSpell(confundo);
+
+            maru.AddItem(Snitch Dorada);
             maru.AddSpell(crucio);
 
             mateito.AddItem(piedra);
