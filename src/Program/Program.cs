@@ -10,8 +10,8 @@ namespace Program
         {
             Wizard  maru = new Wizard("Maru", 100, 15);
             Wizard emi = new Wizard("Emi", 100, 20);
-            Elf mateito = new Elf("Mateito", 100);
-            Dwarf frankie = new Dwarf("Frankie", 100);
+            Elf mateito = new Elf("Mateito", 100, 10);
+            Dwarf frankie = new Dwarf("Frankie", 100, 12);
 
             // Crear elementos
             Spell confundo = new Spell("Confundo", 12);
