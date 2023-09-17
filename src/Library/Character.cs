@@ -6,15 +6,16 @@ namespace Library;
 public class Character
 {
     public string Name { get; set; }
+    public int  MaxHealth { get; set; }
     public int Health { get; set; }
 
-    public Character(string name, int health)
+
+    public Character(string name, int maxHealth)
     {
-        this.Name = name;
-        this.Health = health;
+        Name = name;
+        MaxHealth = maxHealth;
+        Health = maxHealth; // Health se inicializa con el valor de MaxHealth
     }
-
-
 
     public void Attack(Character target, int attackPower)
     {
@@ -23,11 +24,9 @@ public class Character
 
     public void Defend(int defensePower)
     {
-        this.Health += defensePower;
+        this.Health = Math.Min(this.MaxHealth, this.Health + defensePower);
     }
 }
-
-
 
 public class Item //sería el arma o el libro de hechizos o lo que sea
 {
