@@ -15,23 +15,3 @@ public interface Character
     public void Curar(int vida);
     
 }
-
-
-public void AddItem(Item item)
-        {
-            Items.Add(item);
-        }
-
-        public void RemoveItem(Item item)
-        {
-            Items.Remove(item);
-        }
-
-        public void ChangeItem(Item currentItem, Item newItem)
-        {
-            if (Items.Contains(currentItem))
-            {
-                Items.Remove(currentItem);
-                Items.Add(newItem);
-            }
-        }

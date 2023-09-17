@@ -7,6 +7,7 @@ public class Spell : Item
     public string Name { get; set; }
     public int Power {get; set;}
     public int Defensa { get; set; }
+    public List<Item> Spells { get; set; }
 
     public Spell(string name, int power, int defensa) 
     {
@@ -14,9 +15,22 @@ public class Spell : Item
         this.Power = power;
         this.Defensa = defensa;
     }
+    public void AddItem(Item spell)
+        {
+            Spells.Add(spell);
+        }
 
-    public void Cast(Character target)
-    {
-        
-    }
+    public void RemoveItem(Item spell)
+        {
+            Spells.Remove(spell);
+        }
+
+    public void ChangeItem(Item currentSpell, Item newSpell)
+        {
+            if (Spells.Contains(currentSpell))
+            {
+                Spells.Remove(currentSpell);
+                Spells.Add(newSpell);
+            }
+        }
 }
