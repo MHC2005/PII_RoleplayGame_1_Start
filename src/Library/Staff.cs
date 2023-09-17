@@ -16,23 +16,4 @@ public class Staff : Item
         this.Power = power;
         this.Defensa = defensa;
     }
-
-    public void AddItem(Item staff)
-        {
-            Stafff.Add(staff);
-        }
-
-    public void RemoveItem(Item staff)
-        {
-            Stafff.Remove(staff);
-        }
-
-    public void ChangeItem(Item currentStaff, Item newStaff)
-        {
-            if (Stafff.Contains(currentStaff))
-            {
-                Stafff.Remove(currentStaff);
-                Stafff.Add(newStaff);
-            }
-        }
 }
