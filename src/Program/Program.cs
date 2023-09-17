@@ -8,35 +8,35 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Wizard Maru = new Wizard("Maru", 100, 15);
-            Wizard Emi = new Wizard("Emi", 100, 20);
-            Elf Mateito = new Elf("Mateito", 100);
-            Dwarf Frankie = new Dwarf("Frankie", 100);
+            Wizard  maru = new Wizard("Maru", 100, 15);
+            Wizard emi = new Wizard("Emi", 100, 20);
+            Elf mateito = new Elf("Mateito", 100);
+            Dwarf frankie = new Dwarf("Frankie", 100);
 
             // Crear elementos
-            Spell Confundo = new Spell("Confundo");
-            Spell Crucio = new Spell("Crucio");
-            Staff Piedra = new Staff("Piedra Filosofal", 20);
-            Staff Espada = new Staff("Espada de Godric Gryffindor", 10);
+            Spell confundo = new Spell("Confundo");
+            Spell crucio = new Spell("Crucio");
+            Staff piedra = new Staff("Piedra Filosofal", 20);
+            Staff espada = new Staff("Espada de Godric Gryffindor", 10);
 
             // Asignar elementos a los personajes
-            Emi.AddThings(Piedra);
-            Emi.LearnSpell(Confundo);
-            Maru.LearnSpell(Crucio);
+            emi.AddThings(piedra);
+            emi.LearnSpell(confundo);
+            maru.LearnSpell(crucio);
 
-            Mateito.AddItem(Piedra);
+            mateito.AddItem(piedra);
 
-            Frankie.AddWeapon(Espada);
+            frankie.AddWeapon(espada);
 
             // Realizar acciones
-            Maru.Attack(Mateito, 10); // El mago "Maru" ataca al elfo con hechizos
-            Mateito.Attack(Frankie, 10);   // El elfo ataca al enano con su hacha
-            Frankie.Attack(Emi, 5);   // El enano ataca al mago "Emi" con su hacha
+            maru.Attack(mateito, 10); // El mago "Maru" ataca al elfo con hechizos
+            mateito.Attack(frankie, 10);   // El elfo ataca al enano con su hacha
+            frankie.Attack(emi, 5);   // El enano ataca al mago "Emi" con su hacha
 
-            Console.WriteLine($"{Maru.Name}: Health = {Maru.Health}");
-            Console.WriteLine($"{Emi.Name}: Health = {Emi.Health}");
-            Console.WriteLine($"{Mateito.Name}: Health = {Mateito.Health}");
-            Console.WriteLine($"{Frankie.Name}: Health = {Frankie.Health}");
+            Console.WriteLine($"{maru.Name}: Health = {maru.Health}");
+            Console.WriteLine($"{emi.Name}: Health = {emi.Health}");
+            Console.WriteLine($"{mateito.Name}: Health = {mateito.Health}");
+            Console.WriteLine($"{frankie.Name}: Health = {frankie.Health}");
 
             Console.ReadLine();
         }
