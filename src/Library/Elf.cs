@@ -17,15 +17,15 @@ public class Elf : Character
         ElfItems = new List<Item>();
     }
 
-public void Attack(Character target, int attackPower)
-        {
-            target.Health -= attackPower;
-        }
+    public void Attack(Character target, int attackPower)
+            {
+                target.Health -= attackPower;
+            }
 
-public void Defend(int defensePower)
-        {
-            Health = Math.Min(MaxHealth, Health + defensePower);
-        }
+    public void Defend(int defensePower)
+            {
+                Health = Math.Min(MaxHealth, Health + defensePower);
+            }
 
     public void AddItem(Item item)
     {

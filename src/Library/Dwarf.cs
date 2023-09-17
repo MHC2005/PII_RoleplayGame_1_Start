@@ -6,12 +6,28 @@ namespace Library;
 
 public class Dwarf : Character
 {
+    public string Name { get; set; }
+    public int MaxHealth { get; set; }
+    public int Health { get; set; }
     public List<Item> DwarfItems { get; set; }
 
-    public Dwarf(string name, int power) : base(name, power)
+    public Dwarf(string name, int maxHealth, int power) 
     {
+        Name = name;
+        MaxHealth = maxHealth;
+        Health = maxHealth;
         this.DwarfItems = new List<Item>();
     }
+    public void Attack(Character target, int attackPower)
+        {
+            target.Health -= attackPower;
+        }
+
+    public void Defend(int defensePower)
+        {
+            Health = Math.Min(MaxHealth, Health + defensePower);
+        }
+
 
     public void AddWeapon(Item weapon)
     {
