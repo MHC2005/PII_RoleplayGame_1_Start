@@ -54,17 +54,17 @@ public class Wizard : Character
             }
         }
 
-    public void AddItem(Item staff)
+    public void AddSpell(Item staff)
         {
             WizardItems.Add(staff);
         }
 
-    public void RemoveItem(Item staff)
+    public void RemoveSpell(Item staff)
         {
             WizardItems.Remove(staff);
         }
 
-    public void ChangeItem(Item currentStaff, Item newStaff)
+    public void ChangeSpell(Item currentStaff, Item newStaff)
         {
             if (WizardItems.Contains(currentStaff))
             {

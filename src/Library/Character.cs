@@ -13,5 +13,15 @@ public interface Character
     public void Attack(Character target, Item item);
 
     public void Curar(int vida);
+
+    public void AddItem(Item spell);
+
+    public void RemoveItem(Item spell);
+
+    public void ChangeItem(Item currentSpell, Item newSpell);
+
+
+
+
     
 }
