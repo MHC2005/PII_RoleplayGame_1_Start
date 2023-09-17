@@ -26,7 +26,7 @@ public class Wizard : Character
             target.Health -= attackPower;
         }
 
-        public void Defend(int defensePower)
+    public void Defend(int defensePower)
         {
             Health = Math.Min(MaxHealth, Health + defensePower);
         }
