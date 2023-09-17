@@ -46,5 +46,3 @@ public class Wizard : Character
         Spells.Add(spell);
     }
 }
-
-   

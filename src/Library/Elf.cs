@@ -32,7 +32,6 @@ public class Elf : Character
         
     }
 
-
     public void AddItem(Item item)
     {
         ElfItems.Add(item);
