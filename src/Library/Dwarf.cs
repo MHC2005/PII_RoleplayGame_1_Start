@@ -19,14 +19,19 @@ public class Dwarf : Character
         this.DwarfItems = new List<Item>();
     }
     public void Attack(Character target, int attackPower)
-        {
-            target.Health -= attackPower;
-        }
+    {
+        target.Health -= attackPower;
+    }
 
-    public void Defend(int defensePower)
-        {
-            Health = Math.Min(MaxHealth, Health + defensePower);
+    public void Curar(int vida)
+    {
+        if( vida + this.Health>=MaxHealth){
+            Health = MaxHealth;
+        }else{
+            Health = vida + this.Health;
         }
+        
+    }
 
 
     public void AddWeapon(Item weapon)

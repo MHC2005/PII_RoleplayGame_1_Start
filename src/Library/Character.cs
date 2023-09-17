@@ -12,7 +12,7 @@ public interface Character
 
     public void Attack(Character target, int attackPower);
 
-    public void Defend(int defensePower);
+    public void Curar(int vida);
     
 }
 

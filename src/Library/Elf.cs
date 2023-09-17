@@ -22,10 +22,16 @@ public class Elf : Character
         target.Health -= attackPower;
     }
 
-    public void Defend(int defensePower)
+    public void Curar(int vida)
     {
-        Health = Math.Min(MaxHealth, Health + defensePower);
+        if( vida + this.Health>=MaxHealth){
+            Health = MaxHealth;
+        }else{
+            Health = vida + this.Health;
+        }
+        
     }
+
 
     public void AddItem(Item item)
     {
