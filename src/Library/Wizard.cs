@@ -18,7 +18,7 @@ public class Wizard : Character
         MaxHealth = maxHealth;
         Health = maxHealth;
         Spells = new List<Item>();
-        WizardItems = new List<Item>(); // Inicializa la lista WizardItems
+        WizardItems = new List<Item>(); 
     }
 
     public void Attack(Character target, Item item)

@@ -7,7 +7,7 @@ public class Spell : Item
     public string Name { get; set; }
     public int Power {get; set;}
     public int Defensa { get; set; }
-    //public List<Item> Spells { get; set; }
+    
     private List<Spell> book;
 
 
