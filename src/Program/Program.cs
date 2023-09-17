@@ -14,8 +14,8 @@ namespace Program
             Dwarf frankie = new Dwarf("Frankie", 100);
 
             // Crear elementos
-            Spell confundo = new Spell("Confundo");
-            Spell crucio = new Spell("Crucio");
+            Spell confundo = new Spell("Confundo", 12);
+            Spell crucio = new Spell("Crucio", 10);
             Staff piedra = new Staff("Piedra Filosofal", 20);
             Staff espada = new Staff("Espada de Godric Gryffindor", 10);
 
