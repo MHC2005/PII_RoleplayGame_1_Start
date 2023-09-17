@@ -9,7 +9,7 @@ public class Elf : Character
     public int Health { get; set; }
     public List<Item> ElfItems { get; set; }
 
-    public Elf(string name, int maxHealth, int power) 
+    public Elf(string name, int maxHealth, int power)
     {
         Name = name;
         MaxHealth = maxHealth;
@@ -24,38 +24,52 @@ public class Elf : Character
 
     public void Curar(int vida)
     {
-        if( vida + this.Health>=MaxHealth){
+        if (vida + this.Health >= MaxHealth)
+        {
             Health = MaxHealth;
-        }else{
+        }
+        else
+        {
             Health = vida + this.Health;
         }
-        
+
     }
     public void AddItem(Item staff)
-        {
-            ElfItems.Add(staff);
-        }
+    {
+        ElfItems.Add(staff);
+    }
 
     public void RemoveItem(Item staff)
-        {
-            ElfItems.Remove(staff);
-        }
+    {
+        ElfItems.Remove(staff);
+    }
 
     public void ChangeItem(Item currentStaff, Item newStaff)
+    {
+        if (ElfItems.Contains(currentStaff))
         {
-            if (ElfItems.Contains(currentStaff))
-            {
-                ElfItems.Remove(currentStaff);
-                ElfItems.Add(newStaff);
-            }
+            ElfItems.Remove(currentStaff);
+            ElfItems.Add(newStaff);
         }
-    
-    public int AtaqueTotal(){
-    int total = 0;
-    foreach (var i in ElfItems){
-        total = total + i.Power;
     }
-    return total;
+
+    public int AtaqueTotal()
+    {
+        int total = 0;
+        foreach (var i in ElfItems)
+        {
+            total = total + i.Power;
+        }
+        return total;
     }
-    
+
+    public int DefensaTotal()
+    {
+        int total = 0;
+        foreach (var i in ElfItems)
+        {
+            total = total + i.Defensa;
+        }
+        return total;
+    }
 }

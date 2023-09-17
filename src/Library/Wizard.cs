@@ -10,9 +10,9 @@ public class Wizard : Character
     public int Health { get; set; }
     public List<Item> Spells { get; set; }
     public List<Item> WizardItems { get; set; }
-    
 
-    public Wizard(string name, int maxHealth, int power) 
+
+    public Wizard(string name, int maxHealth, int power)
     {
         Name = name;
         MaxHealth = maxHealth;
@@ -20,20 +20,23 @@ public class Wizard : Character
         Spells = new List<Item>();
         WizardItems = new List<Item>(); // Inicializa la lista WizardItems
     }
-    
+
     public void Attack(Character target, Item item)
     {
         target.Health -= item.Power;
     }
-    
+
     public void Curar(int vida)
     {
-        if( vida + this.Health>=MaxHealth){
+        if (vida + this.Health >= MaxHealth)
+        {
             Health = MaxHealth;
-        }else{
+        }
+        else
+        {
             Health = vida + this.Health;
         }
-        
+
     }
     public void AddItem(Item spell)
     {
@@ -73,12 +76,24 @@ public class Wizard : Character
         }
     }
 
-    public int AtaqueTotal(){
+    public int AtaqueTotal()
+    {
         int total = 0;
-        foreach (var i in WizardItems){
+        foreach (var i in WizardItems)
+        {
             total = total + i.Power;
         }
         return total;
     }
-    
+
+    public int DefensaTotal()
+    {
+        int total = 0;
+        foreach (var i in WizardItems)
+        {
+            total = total + i.Defensa;
+        }
+        return total;
+    }
+
 }

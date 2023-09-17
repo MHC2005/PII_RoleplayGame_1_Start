@@ -22,8 +22,6 @@ public interface Character
 
     public int AtaqueTotal();
 
-
-
-
-    
+    public int DefensaTotal();
+        
 }

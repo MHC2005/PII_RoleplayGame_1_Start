@@ -12,7 +12,7 @@ public class Dwarf : Character
     public int Health { get; set; }
     public List<Item> DwarfItems { get; set; }
 
-    public Dwarf(string name, int maxHealth, int power) 
+    public Dwarf(string name, int maxHealth, int power)
     {
         Name = name;
         MaxHealth = maxHealth;
@@ -26,12 +26,15 @@ public class Dwarf : Character
 
     public void Curar(int vida)
     {
-        if( vida + this.Health>=MaxHealth){
+        if (vida + this.Health >= MaxHealth)
+        {
             Health = MaxHealth;
-        }else{
+        }
+        else
+        {
             Health = vida + this.Health;
         }
-        
+
     }
 
     public void AddItem(Item staff)
@@ -52,11 +55,23 @@ public class Dwarf : Character
             DwarfItems.Add(newStaff);
         }
     }
-    
-    public int AtaqueTotal(){
+
+    public int AtaqueTotal()
+    {
         int total = 0;
-        foreach (var i in DwarfItems){
+        foreach (var i in DwarfItems)
+        {
             total = total + i.Power;
+        }
+        return total;
+    }
+
+    public int DefensaTotal()
+    {
+        int total = 0;
+        foreach (var i in DwarfItems)
+        {
+            total = total + i.Defensa;
         }
         return total;
     }
