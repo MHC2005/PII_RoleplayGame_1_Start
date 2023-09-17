@@ -18,14 +18,14 @@ public class Elf : Character
     }
 
     public void Attack(Character target, int attackPower)
-            {
-                target.Health -= attackPower;
-            }
+    {
+        target.Health -= attackPower;
+    }
 
     public void Defend(int defensePower)
-            {
-                Health = Math.Min(MaxHealth, Health + defensePower);
-            }
+    {
+        Health = Math.Min(MaxHealth, Health + defensePower);
+    }
 
     public void AddItem(Item item)
     {
