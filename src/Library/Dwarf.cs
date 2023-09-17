@@ -33,8 +33,23 @@ public class Dwarf : Character
         
     }
 
-    public void AddWeapon(Item weapon)
-    {
-        DwarfItems.Add(weapon);
-    }
+    public void AddItem(Item staff)
+        {
+            DwarfItems.Add(staff);
+        }
+
+    public void RemoveItem(Item staff)
+        {
+            DwarfItems.Remove(staff);
+        }
+
+    public void ChangeItem(Item currentStaff, Item newStaff)
+        {
+            if (DwarfItems.Contains(currentStaff))
+            {
+                DwarfItems.Remove(currentStaff);
+                DwarfItems.Add(newStaff);
+            }
+        }
+    
 }

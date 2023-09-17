@@ -31,9 +31,23 @@ public class Elf : Character
         }
         
     }
+    public void AddItem(Item staff)
+        {
+            ElfItems.Add(staff);
+        }
 
-    public void AddItem(Item item)
-    {
-        ElfItems.Add(item);
-    }
+    public void RemoveItem(Item staff)
+        {
+            ElfItems.Remove(staff);
+        }
+
+    public void ChangeItem(Item currentStaff, Item newStaff)
+        {
+            if (ElfItems.Contains(currentStaff))
+            {
+                ElfItems.Remove(currentStaff);
+                ElfItems.Add(newStaff);
+            }
+        }
+    
 }

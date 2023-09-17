@@ -8,7 +8,7 @@ public class Wizard : Character
     public string Name { get; set; }
     public int MaxHealth { get; set; }
     public int Health { get; set; }
-    public List<Spell> Spells { get; set; }
+    public List<Item> Spells { get; set; }
     public List<Item> WizardItems { get; set; }
     
 
@@ -17,7 +17,7 @@ public class Wizard : Character
         Name = name;
         MaxHealth = maxHealth;
         Health = maxHealth;
-        Spells = new List<Spell>();
+        Spells = new List<Item>();
         WizardItems = new List<Item>(); // Inicializa la lista WizardItems
     }
     
@@ -35,14 +35,42 @@ public class Wizard : Character
         }
         
     }
+    public void AddItem(Item spell)
+        {
+            Spells.Add(spell);
+        }
 
-    public void AddThings(Item item)
-    {
-        WizardItems.Add(item);
+    public void RemoveItem(Item spell)
+        {
+            Spells.Remove(spell);
+        }
 
-    }
-    public void LearnSpell(Spell spell)
-    {
-        Spells.Add(spell);
-    }
+    public void ChangeItem(Item currentSpell, Item newSpell)
+        {
+            if (Spells.Contains(currentSpell))
+            {
+                Spells.Remove(currentSpell);
+                Spells.Add(newSpell);
+            }
+        }
+
+    public void AddItem(Item staff)
+        {
+            WizardItems.Add(staff);
+        }
+
+    public void RemoveItem(Item staff)
+        {
+            WizardItems.Remove(staff);
+        }
+
+    public void ChangeItem(Item currentStaff, Item newStaff)
+        {
+            if (WizardItems.Contains(currentStaff))
+            {
+                WizardItems.Remove(currentStaff);
+                WizardItems.Add(newStaff);
+            }
+        }
+    
 }
