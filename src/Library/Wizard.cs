@@ -21,9 +21,9 @@ public class Wizard : Character
         WizardItems = new List<Item>(); // Inicializa la lista WizardItems
     }
     
-    public void Attack(Character target, int attackPower)
+    public void Attack(Character target, Item item)
     {
-        target.Health -= attackPower;
+        target.Health -= item.Power;
     }
     
     public void Curar(int vida)

@@ -29,9 +29,9 @@ namespace Program
             frankie.AddWeapon(espada);
 
             // Realizar acciones
-            maru.Attack(mateito, 10); // El mago "Maru" ataca al elfo con hechizos
-            mateito.Attack(frankie, 10);   // El elfo ataca al enano con su hacha
-            frankie.Attack(emi, 5);   // El enano ataca al mago "Emi" con su hacha
+            maru.Attack(mateito, crucio); // El mago "Maru" ataca al elfo con hechizos
+            mateito.Attack(frankie, piedra);   // El elfo ataca al enano con su hacha
+            frankie.Attack(emi, espada);   // El enano ataca al mago "Emi" con su hacha
 
             Console.WriteLine($"{maru.Name}: Health = {maru.Health}");
             Console.WriteLine($"{emi.Name}: Health = {emi.Health}");

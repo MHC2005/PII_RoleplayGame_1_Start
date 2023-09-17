@@ -17,9 +17,9 @@ public class Elf : Character
         ElfItems = new List<Item>();
     }
 
-    public void Attack(Character target, int attackPower)
+    public void Attack(Character target, Item item)
     {
-        target.Health -= attackPower;
+        target.Health -= item.Power;
     }
 
     public void Curar(int vida)
