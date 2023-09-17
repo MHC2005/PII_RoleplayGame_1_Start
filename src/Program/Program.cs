@@ -38,7 +38,7 @@ namespace Program
             Console.WriteLine($"{Mateito.Name}: Health = {Mateito.Health}");
             Console.WriteLine($"{Frankie.Name}: Health = {Frankie.Health}");
 
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }
