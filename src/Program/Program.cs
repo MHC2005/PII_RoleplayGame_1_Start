@@ -20,13 +20,13 @@ namespace Program
             Staff espada = new Staff("Espada de Godric Gryffindor", 10, 8);
 
             // Asignar elementos a los personajes
-            emi.AddThings(piedra);
-            emi.LearnSpell(confundo);
-            maru.LearnSpell(crucio);
+            emi.AddItem(piedra);
+            emi.AddSpell(confundo);
+            maru.AddSpell(crucio);
 
             mateito.AddItem(piedra);
 
-            frankie.AddWeapon(espada);
+            frankie.AddItem(espada);
 
             // Realizar acciones
             maru.Attack(mateito, crucio); // El mago "Maru" ataca al elfo con hechizos
