@@ -14,10 +14,10 @@ namespace Program
             Dwarf frankie = new Dwarf("Frankie", 100, 12);
 
             // Crear elementos
-            Spell confundo = new Spell("Confundo", 12);
-            Spell crucio = new Spell("Crucio", 10);
-            Staff piedra = new Staff("Piedra Filosofal", 20);
-            Staff espada = new Staff("Espada de Godric Gryffindor", 10);
+            Spell confundo = new Spell("Confundo", 12, 10);
+            Spell crucio = new Spell("Crucio", 10, 8);
+            Staff piedra = new Staff("Piedra Filosofal", 20, 18);
+            Staff espada = new Staff("Espada de Godric Gryffindor", 10, 8);
 
             // Asignar elementos a los personajes
             emi.AddThings(piedra);
