@@ -36,41 +36,49 @@ public class Wizard : Character
         
     }
     public void AddItem(Item spell)
-        {
-            Spells.Add(spell);
-        }
+    {
+        Spells.Add(spell);
+    }
 
     public void RemoveItem(Item spell)
-        {
-            Spells.Remove(spell);
-        }
+    {
+        Spells.Remove(spell);
+    }
 
     public void ChangeItem(Item currentSpell, Item newSpell)
+    {
+        if (Spells.Contains(currentSpell))
         {
-            if (Spells.Contains(currentSpell))
-            {
-                Spells.Remove(currentSpell);
-                Spells.Add(newSpell);
-            }
+            Spells.Remove(currentSpell);
+            Spells.Add(newSpell);
         }
+    }
 
     public void AddSpell(Item staff)
-        {
-            WizardItems.Add(staff);
-        }
+    {
+        WizardItems.Add(staff);
+    }
 
     public void RemoveSpell(Item staff)
-        {
-            WizardItems.Remove(staff);
-        }
+    {
+        WizardItems.Remove(staff);
+    }
 
     public void ChangeSpell(Item currentStaff, Item newStaff)
+    {
+        if (WizardItems.Contains(currentStaff))
         {
-            if (WizardItems.Contains(currentStaff))
-            {
-                WizardItems.Remove(currentStaff);
-                WizardItems.Add(newStaff);
-            }
+            WizardItems.Remove(currentStaff);
+            WizardItems.Add(newStaff);
         }
+    }
+
+    public int AtaqueTotal(){
+        int total = 0;
+        foreach (var i in WizardItems){
+            total = total + i.Power;
+        }
+        return total;
+    }
     
 }

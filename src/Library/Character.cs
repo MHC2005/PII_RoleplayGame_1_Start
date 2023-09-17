@@ -20,6 +20,8 @@ public interface Character
 
     public void ChangeItem(Item currentSpell, Item newSpell);
 
+    public int AtaqueTotal();
+
 
 
 

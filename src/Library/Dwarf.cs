@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 
 
 namespace Library;
@@ -34,22 +35,29 @@ public class Dwarf : Character
     }
 
     public void AddItem(Item staff)
-        {
-            DwarfItems.Add(staff);
-        }
+    {
+        DwarfItems.Add(staff);
+    }
 
     public void RemoveItem(Item staff)
-        {
-            DwarfItems.Remove(staff);
-        }
+    {
+        DwarfItems.Remove(staff);
+    }
 
     public void ChangeItem(Item currentStaff, Item newStaff)
+    {
+        if (DwarfItems.Contains(currentStaff))
         {
-            if (DwarfItems.Contains(currentStaff))
-            {
-                DwarfItems.Remove(currentStaff);
-                DwarfItems.Add(newStaff);
-            }
+            DwarfItems.Remove(currentStaff);
+            DwarfItems.Add(newStaff);
         }
+    }
     
+    public int AtaqueTotal(){
+        int total = 0;
+        foreach (var i in DwarfItems){
+            total = total + i.Power;
+        }
+        return total;
+    }
 }

@@ -50,4 +50,12 @@ public class Elf : Character
             }
         }
     
+    public int AtaqueTotal(){
+    int total = 0;
+    foreach (var i in ElfItems){
+        total = total + i.Power;
+    }
+    return total;
+    }
+    
 }
