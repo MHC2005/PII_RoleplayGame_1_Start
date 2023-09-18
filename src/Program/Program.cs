@@ -19,6 +19,8 @@ namespace Program
             Staff piedra = new Staff("Piedra Filosofal", 20, 18);
             Staff espada = new Staff("Espada de Godric Gryffindor", 10, 8);
             Staff SnitchDorada = new Staff("Snitch Dorada Quidditch", 16, 14);
+            Staff MonedaMagica = new Staff("Moneda Magica", 0, 30);
+            Staff Varita = new Staff("Varita Magica", 15, 5);
 
             // Asignar elementos a los personajes
             emi.AddItem(piedra);
