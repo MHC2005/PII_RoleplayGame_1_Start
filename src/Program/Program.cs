@@ -30,6 +30,7 @@ namespace Program
             maru.AddSpell(crucio);
 
             mateito.AddItem(piedra);
+            mateito.AddItem(MonedaMagica);
 
             frankie.AddItem(espada);
 
