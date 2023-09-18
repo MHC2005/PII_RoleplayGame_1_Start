@@ -13,6 +13,7 @@ namespace Program
             Elf mateito = new Elf("Mateito", 100, 10);
             Dwarf frankie = new Dwarf("Frankie", 100, 12);
 
+
             // Crear elementos
             Spell confundo = new Spell("Confundo", 12, 10);
             Spell crucio = new Spell("Crucio", 10, 8);
@@ -54,7 +55,6 @@ namespace Program
             Console.WriteLine($"{mateito.Name}: Health = {mateito.Health} Total Defense = {mateito.DefensaTotal()} Total Atack = {mateito.AtaqueTotal()}");
             Console.WriteLine($"{frankie.Name}: Health = {frankie.Health} Total Defense = {frankie.DefensaTotal()} Total Atack = {frankie.AtaqueTotal()}");
             
-            Console.ReadLine();
         }
     }
 }
