@@ -21,6 +21,7 @@ namespace Program
             Staff snitchDorada = new Staff("Snitch Dorada Quidditch", 16, 14);
             Staff monedaMagica = new Staff("Moneda Magica", 0, 30);
             Staff varita = new Staff("Varita Magica", 15, 5);
+            Staff capa = new Staff("Capa invisibilidad", 10, 35);
 
             // Asignar elementos a los personajes
             emi.AddItem(varita);
@@ -33,6 +34,7 @@ namespace Program
             mateito.AddItem(monedaMagica);
 
             frankie.AddItem(espada);
+            frankie.AddItem(capa);
 
             // Realizar acciones
             maru.Attack(mateito, crucio); // El mago "Maru" ataca al elfo con hechizos
