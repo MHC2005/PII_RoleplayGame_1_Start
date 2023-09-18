@@ -22,8 +22,13 @@ namespace Program
             Staff monedaMagica = new Staff("Moneda Magica", 0, 30);
             Staff varita = new Staff("Varita Magica", 15, 5);
             Staff capa = new Staff("Capa invisibilidad", 10, 35);
-            Spell.AddSpellToBook(confundo);
-
+            Book book = new Book();
+            book.AddSpellToBook(confundo);
+            book.AddSpellToBook(crucio);
+            Console.WriteLine("EL libro de hechizos contiene los siguientes: ");
+            foreach(var hechizo in book.GetSpellsInBook()){
+                Console.WriteLine($"-{hechizo.Name}");
+            }
 
             // Asignar elementos a los personajes
             emi.AddItem(varita);
