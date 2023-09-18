@@ -18,19 +18,19 @@ namespace Program
             Spell crucio = new Spell("Crucio", 10, 8);
             Staff piedra = new Staff("Piedra Filosofal", 20, 18);
             Staff espada = new Staff("Espada de Godric Gryffindor", 10, 8);
-            Staff SnitchDorada = new Staff("Snitch Dorada Quidditch", 16, 14);
-            Staff MonedaMagica = new Staff("Moneda Magica", 0, 30);
-            Staff Varita = new Staff("Varita Magica", 15, 5);
+            Staff snitchDorada = new Staff("Snitch Dorada Quidditch", 16, 14);
+            Staff monedaMagica = new Staff("Moneda Magica", 0, 30);
+            Staff varita = new Staff("Varita Magica", 15, 5);
 
             // Asignar elementos a los personajes
-            emi.AddItem(piedra);
+            emi.AddItem(varita);
             emi.AddSpell(confundo);
 
-            maru.AddItem(SnitchDorada);
+            maru.AddItem(snitchDorada);
             maru.AddSpell(crucio);
 
             mateito.AddItem(piedra);
-            mateito.AddItem(MonedaMagica);
+            mateito.AddItem(monedaMagica);
 
             frankie.AddItem(espada);
 
