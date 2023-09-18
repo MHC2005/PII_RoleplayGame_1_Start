@@ -42,8 +42,7 @@ namespace Program
             frankie.Attack(emi, espada);   // El enano ataca al mago "Emi" con su hacha
 
 
-
-            Console.WriteLine($"{maru.Name}: Health = {maru.Health}");
+            Console.WriteLine($"{maru.Name}: Health = {maru.Health} Total Defense = {maru.DefensaTotal}");
             Console.WriteLine($"{emi.Name}: Health = {emi.Health}");
             Console.WriteLine($"{mateito.Name}: Health = {mateito.Health}");
             Console.WriteLine($"{frankie.Name}: Health = {frankie.Health}");
