@@ -12,9 +12,5 @@ namespace Test.Library
             string output = MaxHealth==100;
             Assert.AreEqual(output, expected);
         }
-        public void dummyTest()
-        {
-            Assert.True(true);
-        }
     }
 }
