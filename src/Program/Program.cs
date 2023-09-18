@@ -22,6 +22,8 @@ namespace Program
             Staff monedaMagica = new Staff("Moneda Magica", 0, 30);
             Staff varita = new Staff("Varita Magica", 15, 5);
             Staff capa = new Staff("Capa invisibilidad", 10, 35);
+            Spell.AddSpellToBook(confundo);
+
 
             // Asignar elementos a los personajes
             emi.AddItem(varita);
@@ -46,7 +48,7 @@ namespace Program
             Console.WriteLine($"{emi.Name}: Health = {emi.Health} Total Defense = {emi.DefensaTotal()} Total Atack = {emi.AtaqueTotal()}");
             Console.WriteLine($"{mateito.Name}: Health = {mateito.Health} Total Defense = {mateito.DefensaTotal()} Total Atack = {mateito.AtaqueTotal()}");
             Console.WriteLine($"{frankie.Name}: Health = {frankie.Health} Total Defense = {frankie.DefensaTotal()} Total Atack = {frankie.AtaqueTotal()}");
-
+            
             Console.ReadLine();
         }
     }
